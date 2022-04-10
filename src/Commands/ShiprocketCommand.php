@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace AniketIN\Shiprocket\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class ShiprocketCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-shiprocket';
 
     public $description = 'My command';
 

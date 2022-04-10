@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "aniket-in/laravel-shiprocket",
+    "description": "Shiprocket API Wrapper for Laravel",
     "keywords": [
-        ":vendor_name",
+        "Aniket-IN",
         "laravel",
-        ":package_slug"
+        "laravel-shiprocket"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/aniket-in/laravel-shiprocket",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Aniket Das",
+            "email": "aniket.das.in@gmail.com",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "AniketIN\\Shiprocket\\": "src",
+            "AniketIN\\Shiprocket\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "AniketIN\\Shiprocket\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,15 +49,18 @@
         "test-coverage": "vendor/bin/pest --coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "AniketIN\\Shiprocket\\ShiprocketServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "Shiprocket": "AniketIN\\Shiprocket\\Facades\\Shiprocket"
             }
         }
     },
