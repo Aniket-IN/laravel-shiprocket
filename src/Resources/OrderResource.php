@@ -13,12 +13,12 @@ class OrderResource
         $this->shiprocket = $shiprocket;
     }
 
-    public function create($params)
+    public function create($params = null)
     {
         return $this->shiprocket->post("https://apiv2.shiprocket.in/v1/external/orders/create/adhoc", $params);
     }
 
-    public function update($params)
+    public function update($params = null)
     {
         return $this->shiprocket->post("https://apiv2.shiprocket.in/v1/external/orders/update/adhoc", $params);
     }
@@ -28,12 +28,12 @@ class OrderResource
         return $this->shiprocket->post("https://apiv2.shiprocket.in/v1/external/orders/cancel", ['ids' => $ids]);
     }
 
-    public function createChannelSpecific($params)
+    public function createChannelSpecific($params = null)
     {
         return $this->shiprocket->post("https://apiv2.shiprocket.in/v1/external/orders/create", $params);
     }
 
-    public function updateCustomerAddress($params)
+    public function updateCustomerAddress($params = null)
     {
         return $this->shiprocket->post("https://apiv2.shiprocket.in/v1/external/orders/address/update", $params);
     }
@@ -43,9 +43,9 @@ class OrderResource
         return $this->shiprocket->get("https://apiv2.shiprocket.in/v1/external/orders/show/{$order_id}");
     }
 
-    public function all()
+    public function all($params = null)
     {
-        return $this->shiprocket->get("https://apiv2.shiprocket.in/v1/external/orders");
+        return $this->shiprocket->get("https://apiv2.shiprocket.in/v1/external/orders", $params);
     }
 
     public function export()

@@ -13,9 +13,9 @@ class ShipmentResource
         $this->shiprocket = $shiprocket;
     }
 
-    public function all()
+    public function all($params = null)
     {
-        return $this->shiprocket->get("https://apiv2.shiprocket.in/v1/external/shipments");
+        return $this->shiprocket->get("https://apiv2.shiprocket.in/v1/external/shipments", $params);
     }
 
     public function cancelByAWBs($awbs)
