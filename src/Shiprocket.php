@@ -2,12 +2,11 @@
 
 namespace AniketIN\Shiprocket;
 
+use AniketIN\Shiprocket\Resources\CourierResource;
+use AniketIN\Shiprocket\Resources\OrderResource;
+use AniketIN\Shiprocket\Resources\ShipmentResource;
 use Error;
 use Illuminate\Support\Facades\Http;
-use AniketIN\Shiprocket\Resources\OrderResource;
-use AniketIN\Shiprocket\Resources\CourierResource;
-use AniketIN\Shiprocket\Resources\ShipmentResource;
-
 
 class Shiprocket
 {
@@ -55,11 +54,11 @@ class Shiprocket
     public function getToken(): string
     {
         $duration = config('shiprocket.token_cache') ? config('shiprocket.token_cache_duration') : 0;
-       
+
         if (! $duration) {
             return $this->callApiForToken();
         }
-        
+
         return cache()->remember("shiprocket-token-{$this->credentials['email']}", $duration, function () {
             return $this->callApiForToken();
         });
@@ -72,8 +71,10 @@ class Shiprocket
             'password' => $this->credentials['password'],
         ]);
 
-        if ($call->failed()) throw new Error($call->body());
-    
+        if ($call->failed()) {
+            throw new Error($call->body());
+        }
+
         return $call->json()['token'];
     }
 

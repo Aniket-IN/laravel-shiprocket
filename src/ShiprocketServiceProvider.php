@@ -4,7 +4,6 @@ namespace AniketIN\Shiprocket;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use AniketIN\Shiprocket\Commands\ShiprocketCommand;
 
 class ShiprocketServiceProvider extends PackageServiceProvider
 {

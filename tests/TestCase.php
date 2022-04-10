@@ -2,9 +2,9 @@
 
 namespace AniketIN\Shiprocket\Tests;
 
+use AniketIN\Shiprocket\ShiprocketServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use AniketIN\Shiprocket\ShiprocketServiceProvider;
 
 class TestCase extends Orchestra
 {
