@@ -7,7 +7,8 @@ return [
     | Shiprocket Credentilas
     |--------------------------------------------------------------------------
     |
-    | Here you can set the shiprocket credentilas.
+    | Here you can set multiple shiprocket credentilas pair.
+    | And then use any credential pair by their key i.e. default, second 
     | 
     */
 
@@ -23,9 +24,27 @@ return [
     ],
 
     
+     /*
+    |--------------------------------------------------------------------------
+    | Shiprocket Credentilas
+    |--------------------------------------------------------------------------
+    |
+    | Here you can set the default credentilas to use by their key.
+    | i.e. default, second 
+    | 
+    */
+
     'default_credentials' => env('SHIPROCKET_DEFAULT_CREDENTIALS', 'default'),
 
 
+     /*
+    |--------------------------------------------------------------------------
+    | Shiprocket Credentilas
+    |--------------------------------------------------------------------------
+    |
+    | Here you can set the behaviour whether to use caching or not for auth tokens.
+    | 
+    */
     'token_cache' => env('SHIPROCKET_TOKEN_CACHE', true),
 
 
