@@ -69,13 +69,23 @@ class Shiprocket
         return $call->json()['token'];
     }
 
+    public function httpClient()
+    {
+        return Http::withToken($this->token)->retry(3, 100);
+    }
+
+    public function patch($url, $data = null)
+    {
+        return $this->httpClient()->patch($url, $data);
+    }
+
     public function get($url, $data = null)
     {
-        return Http::withToken($this->token)->retry(3, 100)->get($url, $data);
+        return $this->httpClient()->get($url, $data);
     }
 
     public function post($url, $data = null)
     {
-        return Http::withToken($this->token)->retry(3, 100)->post($url, $data);
+        return $this->httpClient()->post($url, $data);
     }
 }

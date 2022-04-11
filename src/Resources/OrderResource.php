@@ -33,6 +33,11 @@ class OrderResource
         return $this->shiprocket->post("https://apiv2.shiprocket.in/v1/external/orders/create", $params);
     }
 
+    public function updatePickupAddress($params = null)
+    {
+        return $this->shiprocket->patch("https://apiv2.shiprocket.in/v1/external/orders/address/pickup", $params);
+    }
+
     public function updateCustomerAddress($params = null)
     {
         return $this->shiprocket->post("https://apiv2.shiprocket.in/v1/external/orders/address/update", $params);
