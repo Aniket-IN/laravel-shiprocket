@@ -22,10 +22,7 @@ return [
         // ],
     ],
 
-
-    'default_response_method' => env('SHIPROCKET_DEFAULT_RESPONSE_METHOD', 'json'),
-
-
+    
     'default_credentials' => env('SHIPROCKET_DEFAULT_CREDENTIALS', 'default'),
 
 
