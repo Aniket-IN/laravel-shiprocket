@@ -3,6 +3,12 @@
 
 Shiprocket API Wrapper for Laravel
 
+## Features
+
+- Fully Customizeable
+- Easy One Liners
+- Token Caching
+- Any Data Type for Response 
 
 ## Installation
 
@@ -82,13 +88,24 @@ return [
 ];
 ```
 
-## Features
+## Import
+To use the methods of this package, import the Facade on top of your controller like this:
+```php
+use AniketIN\Shiprocket\Facades\Shiprocket;
+```
 
-- Fully Customizeable
-- Easy One Liners
-- Token Caching
-- Any Data Type for Response 
+## Authentication
 
+Using this package handle the Authentication itself, you don't need to do anything other than, just setting up your Shiprocket credentials in the `config/shiprocket.php` file. 
+
+You can also configure *token caching* to `true` in that config file. 
+This will save a lot of time by caching the *token* and not generating new token on every request.
+The `cache duration` is also customizeable.
+
+However, if you want to just get the token
+```php
+Shiprocket::getToken();
+```
 
 ## Authors
 
