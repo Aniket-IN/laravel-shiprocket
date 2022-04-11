@@ -3,6 +3,19 @@
 
 Shiprocket API Wrapper for Laravel
 
+
+## Table of Contents
+1. [Features](https://github.com/Aniket-IN/laravel-shiprocket#features)
+1. [Installation](https://github.com/Aniket-IN/laravel-shiprocket#installation)
+1. [Import](https://github.com/Aniket-IN/laravel-shiprocket#installation)
+1. [Authenticationn](https://github.com/Aniket-IN/laravel-shiprocket#authenticationn)
+1. [Response](https://github.com/Aniket-IN/laravel-shiprocket#response)
+1. [Usage](https://github.com/Aniket-IN/laravel-shiprocket#response)
+    1. [Orders](https://github.com/seshac/laravel-shiprocket-api#orders)
+    1. [Couriers](https://github.com/seshac/laravel-shiprocket-api#couriers)
+
+
+
 ## Features
 
 - Up-to-date with Shiprocket's API
@@ -113,6 +126,33 @@ Also, if you want to use different credential other than the default one, then:
 Shiprocket::withCredential('another-credential-key')->nowCallYourMethod(...);
 ```
 
+
+## Response
+
+To get the returned response from the API, you may use any of the Laravel provided method, 
+like:
+```php
+Shiprocket::order()->all()->json();
+```
+All available methods:
+```php
+$response->body() : string;
+$response->json($key = null) : array|mixed;
+$response->object() : object;
+$response->collect($key = null) : Illuminate\Support\Collection;
+$response->status() : int;
+$response->ok() : bool;
+$response->successful() : bool;
+$response->redirect(): bool;
+$response->failed() : bool;
+$response->serverError() : bool;
+$response->clientError() : bool;
+$response->header($header) : string;
+$response->headers() : array;
+```
+
+For more information refer https://laravel.com/docs/9.x/http-client#making-requests
+
 ## Orders
 
 
@@ -156,14 +196,6 @@ Shiprocket::order()->update([
 ])
 ```
 
-#### Update Order
-https://apidocs.shiprocket.in/#f08900fe-ea38-485d-b50c-3ec2fbc5644a
-```php
-Shiprocket::order()->update([
-    // refer above url for required parameters...
-])
-```
-
 #### Cancel an Order
 https://apidocs.shiprocket.in/#5c0e41ca-d868-44c4-8ddb-73a8de239401
 ```php
@@ -183,6 +215,59 @@ https://apidocs.shiprocket.in/#aa23cc40-6ee8-4ce0-b0ab-1a7291514299
 ```php
 Shiprocket::order()->detailsById( // the order id )
 ```
+
+
+
+
+
+
+
+## Couriers
+
+#### Generate AWB for Shipment
+https://apidocs.shiprocket.in/#b267ca9a-f7aa-4edc-8477-7dc15e46e08a
+```php
+Shiprocket::courier()->generateAwbForShipment([
+    // refer above url for required parameters...
+])
+```
+
+#### List of Couriers
+https://apidocs.shiprocket.in/#ce08883d-5782-4523-a425-919d10b27536
+```php
+Shiprocket::courier()->list([
+    // refer above url for required parameters...
+])
+```
+
+#### Check Courier Serviceability
+https://apidocs.shiprocket.in/#29ff5116-0917-41ba-8c82-638412604916
+```php
+Shiprocket::courier()->serviceability([
+    // refer above url for required parameters...
+])
+```
+
+#### Check International Courier Serviceability
+https://apidocs.shiprocket.in/#6d1f2fb0-43c1-434f-8c93-50674a0b59ef
+```php
+Shiprocket::courier()->internationalServiceability([
+    // refer above url for required parameters...
+])
+```
+#### Request for Shipment Pickup
+https://apidocs.shiprocket.in/#9f42cdfd-a055-4934-a0f4-86764f87c80d
+```php
+Shiprocket::courier()->requestShipmentPickup([
+    // refer above url for required parameters...
+])
+```
+
+
+
+
+
+
 
 ## Authors
 
