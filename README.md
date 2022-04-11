@@ -184,6 +184,59 @@ https://apidocs.shiprocket.in/#aa23cc40-6ee8-4ce0-b0ab-1a7291514299
 Shiprocket::order()->detailsById( // the order id )
 ```
 
+
+
+
+
+
+
+## Couriers
+
+#### Generate AWB for Shipment
+https://apidocs.shiprocket.in/#b267ca9a-f7aa-4edc-8477-7dc15e46e08a
+```php
+Shiprocket::courier()->generateAwbForShipment([
+    // refer above url for required parameters...
+])
+```
+
+#### List of Couriers
+https://apidocs.shiprocket.in/#ce08883d-5782-4523-a425-919d10b27536
+```php
+Shiprocket::courier()->list([
+    // refer above url for required parameters...
+])
+```
+
+#### Check Courier Serviceability
+https://apidocs.shiprocket.in/#29ff5116-0917-41ba-8c82-638412604916
+```php
+Shiprocket::courier()->serviceability([
+    // refer above url for required parameters...
+])
+```
+
+#### Check International Courier Serviceability
+https://apidocs.shiprocket.in/#6d1f2fb0-43c1-434f-8c93-50674a0b59ef
+```php
+Shiprocket::courier()->internationalServiceability([
+    // refer above url for required parameters...
+])
+```
+#### Request for Shipment Pickup
+https://apidocs.shiprocket.in/#9f42cdfd-a055-4934-a0f4-86764f87c80d
+```php
+Shiprocket::courier()->requestShipmentPickup([
+    // refer above url for required parameters...
+])
+```
+
+
+
+
+
+
+
 ## Authors
 
 - [@Aniket-IN](https://github.com/Aniket-IN)
