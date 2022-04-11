@@ -78,5 +78,4 @@ class Shiprocket
     {
         return Http::withToken($this->token)->retry(3, 100)->post($url, $data);
     }
-
 }
