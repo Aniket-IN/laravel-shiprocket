@@ -183,14 +183,6 @@ Shiprocket::order()->update([
 ])
 ```
 
-#### Update Order
-https://apidocs.shiprocket.in/#f08900fe-ea38-485d-b50c-3ec2fbc5644a
-```php
-Shiprocket::order()->update([
-    // refer above url for required parameters...
-])
-```
-
 #### Cancel an Order
 https://apidocs.shiprocket.in/#5c0e41ca-d868-44c4-8ddb-73a8de239401
 ```php
