@@ -27,5 +27,4 @@ class ReturnResource
     {
         return $this->shiprocket->get("https://apiv2.shiprocket.in/v1/external/courier/serviceability/", $params);
     }
-
 }

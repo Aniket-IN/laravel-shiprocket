@@ -4,8 +4,8 @@ namespace AniketIN\Shiprocket;
 
 use AniketIN\Shiprocket\Resources\CourierResource;
 use AniketIN\Shiprocket\Resources\OrderResource;
-use AniketIN\Shiprocket\Resources\ShipmentResource;
 use AniketIN\Shiprocket\Resources\ReturnResource;
+use AniketIN\Shiprocket\Resources\ShipmentResource;
 use Error;
 use Illuminate\Support\Facades\Http;
 
@@ -48,7 +48,7 @@ class Shiprocket
         return new CourierResource($this);
     }
 
-    public function getToken(): string 
+    public function getToken(): string
     {
         return $this->login()->json()['token'];
     }
