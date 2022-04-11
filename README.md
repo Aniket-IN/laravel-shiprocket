@@ -5,6 +5,7 @@ Shiprocket API Wrapper for Laravel
 
 ## Features
 
+- Up-to-date with Shiprocket's API
 - Fully Customizeable
 - Easy One Liners
 - Token Caching
@@ -105,6 +106,21 @@ The `cache duration` is also customizeable.
 However, if you want to just get the token
 ```php
 Shiprocket::getToken();
+```
+
+Also, if you want to use different credential other than the default one, then: 
+```php
+Shiprocket::withCredential('another-credential-key')->nowCallYourMethod(...);
+```
+
+## Orders
+
+#### Create Custom Order 
+https://apidocs.shiprocket.in/#247e58f3-37f3-4dfb-a4bb-b8f6ab6d41ec
+```php
+Shiprocket::order()->create([
+    // refer above url for required parameters...
+])
 ```
 
 ## Authors
