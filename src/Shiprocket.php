@@ -46,7 +46,7 @@ class Shiprocket
     {
         $duration = config('shiprocket.token_cache') ? config('shiprocket.token_cache_duration') : 0;
 
-        if (!$duration) {
+        if (! $duration) {
             return $this->callApiForToken();
         }
 
