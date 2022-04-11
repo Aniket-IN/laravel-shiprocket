@@ -3,6 +3,19 @@
 
 Shiprocket API Wrapper for Laravel
 
+
+## Table of Contents
+1. [Features](https://github.com/Aniket-IN/laravel-shiprocket#features)
+1. [Installation](https://github.com/Aniket-IN/laravel-shiprocket#installation)
+1. [Import](https://github.com/Aniket-IN/laravel-shiprocket#installation)
+1. [Authenticationn](https://github.com/Aniket-IN/laravel-shiprocket#authenticationn)
+1. [Response](https://github.com/Aniket-IN/laravel-shiprocket#response)
+1. [Usage](https://github.com/Aniket-IN/laravel-shiprocket#response)
+    1. [Orders](https://github.com/seshac/laravel-shiprocket-api#orders)
+    1. [Couriers](https://github.com/seshac/laravel-shiprocket-api#couriers)
+
+
+
 ## Features
 
 - Up-to-date with Shiprocket's API
