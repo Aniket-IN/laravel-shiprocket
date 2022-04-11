@@ -113,6 +113,35 @@ Also, if you want to use different credential other than the default one, then:
 Shiprocket::withCredential('another-credential-key')->nowCallYourMethod(...);
 ```
 
+
+## Response
+
+To get the returned response from the API, you may use any of the Laravel provided method, 
+like:
+```php
+// https://laravel.com/docs/9.x/http-client#making-requests
+// Refer above URl for more information. 
+$response->body() : string;
+$response->json($key = null) : array|mixed;
+$response->object() : object;
+$response->collect($key = null) : Illuminate\Support\Collection;
+$response->status() : int;
+$response->ok() : bool;
+$response->successful() : bool;
+$response->redirect(): bool;
+$response->failed() : bool;
+$response->serverError() : bool;
+$response->clientError() : bool;
+$response->header($header) : string;
+$response->headers() : array;
+```
+
+```php
+Shiprocket::courier()->generateAwbForShipment([
+    // refer above url for required parameters...
+])
+```
+
 ## Orders
 
 
