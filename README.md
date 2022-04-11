@@ -119,8 +119,10 @@ Shiprocket::withCredential('another-credential-key')->nowCallYourMethod(...);
 To get the returned response from the API, you may use any of the Laravel provided method, 
 like:
 ```php
-// https://laravel.com/docs/9.x/http-client#making-requests
-// Refer above URl for more information. 
+Shiprocket::order()->all()->json();
+```
+All available methods:
+```php
 $response->body() : string;
 $response->json($key = null) : array|mixed;
 $response->object() : object;
@@ -136,11 +138,7 @@ $response->header($header) : string;
 $response->headers() : array;
 ```
 
-```php
-Shiprocket::courier()->generateAwbForShipment([
-    // refer above url for required parameters...
-])
-```
+For more information refer https://laravel.com/docs/9.x/http-client#making-requests
 
 ## Orders
 
