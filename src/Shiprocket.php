@@ -5,6 +5,7 @@ namespace AniketIN\Shiprocket;
 use AniketIN\Shiprocket\Resources\CourierResource;
 use AniketIN\Shiprocket\Resources\OrderResource;
 use AniketIN\Shiprocket\Resources\ShipmentResource;
+use AniketIN\Shiprocket\Resources\ReturnResource;
 use Error;
 use Illuminate\Support\Facades\Http;
 
@@ -32,6 +33,11 @@ class Shiprocket
         return new OrderResource($this);
     }
 
+    public function return()
+    {
+        return new ReturnResource($this);
+    }
+
     public function shipment()
     {
         return new ShipmentResource($this);
@@ -42,20 +48,25 @@ class Shiprocket
         return new CourierResource($this);
     }
 
-    public function getToken(): string
+    public function getToken(): string 
+    {
+        return $this->login()->json()['token'];
+    }
+
+    public function login()
     {
         $duration = config('shiprocket.token_cache') ? config('shiprocket.token_cache_duration') : 0;
 
         if (! $duration) {
-            return $this->callApiForToken();
+            return $this->callLoginApi();
         }
 
         return cache()->remember("shiprocket-token-{$this->credentials['email']}", $duration, function () {
-            return $this->callApiForToken();
+            return $this->callLoginApi();
         });
     }
 
-    private function callApiForToken()
+    private function callLoginApi()
     {
         $call = Http::post("https://apiv2.shiprocket.in/v1/external/auth/login", [
             'email' => $this->credentials['email'],
@@ -66,7 +77,7 @@ class Shiprocket
             throw new Error($call->body());
         }
 
-        return $call->json()['token'];
+        return $call;
     }
 
     public function httpClient()

@@ -18,6 +18,11 @@ class ShipmentResource
         return $this->shiprocket->get("https://apiv2.shiprocket.in/v1/external/shipments", $params);
     }
 
+    public function detailsById($shipment_id)
+    {
+        return $this->shiprocket->get("https://apiv2.shiprocket.in/v1/external/shipments/$shipment_id");
+    }
+
     public function cancelByAWBs($awbs)
     {
         return $this->shiprocket->post("https://apiv2.shiprocket.in/v1/external/orders/cancel/shipment/awbs", ['awbs' => $awbs]);
