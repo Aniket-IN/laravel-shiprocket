@@ -115,12 +115,73 @@ Shiprocket::withCredential('another-credential-key')->nowCallYourMethod(...);
 
 ## Orders
 
+
 #### Create Custom Order 
 https://apidocs.shiprocket.in/#247e58f3-37f3-4dfb-a4bb-b8f6ab6d41ec
 ```php
 Shiprocket::order()->create([
     // refer above url for required parameters...
 ])
+```
+
+#### Create Channel Specific Order
+https://apidocs.shiprocket.in/#45126d19-74ed-4cf5-9447-8ac1041bbb3c
+```php
+Shiprocket::order()->createChannelSpecific([
+    // refer above url for required parameters...
+])
+```
+
+#### Change/Update Pickup Location of Created Orders
+https://apidocs.shiprocket.in/#4ba045ab-e25b-4bb1-adbd-37bbd07b354e
+```php
+Shiprocket::order()->updatePickupAddress([
+    // refer above url for required parameters...
+])
+```
+
+#### Update Customer Delivery Address
+https://apidocs.shiprocket.in/#f98ea72a-2efb-4bbc-a4bb-f4dd7e15618a
+```php
+Shiprocket::order()->updateCustomerAddress([
+    // refer above url for required parameters...
+])
+```
+
+#### Update Order
+https://apidocs.shiprocket.in/#f08900fe-ea38-485d-b50c-3ec2fbc5644a
+```php
+Shiprocket::order()->update([
+    // refer above url for required parameters...
+])
+```
+
+#### Update Order
+https://apidocs.shiprocket.in/#f08900fe-ea38-485d-b50c-3ec2fbc5644a
+```php
+Shiprocket::order()->update([
+    // refer above url for required parameters...
+])
+```
+
+#### Cancel an Order
+https://apidocs.shiprocket.in/#5c0e41ca-d868-44c4-8ddb-73a8de239401
+```php
+Shiprocket::order()->cancelByIds([ // order ids... ])
+```
+
+#### Get all Orders
+https://apidocs.shiprocket.in/#d4f48023-b0b2-40af-8072-1adf97227d21
+```php
+Shiprocket::order()->all([ 
+    // refer above url for required parameters...
+])
+```
+
+#### Get Specific Order Details
+https://apidocs.shiprocket.in/#aa23cc40-6ee8-4ce0-b0ab-1a7291514299
+```php
+Shiprocket::order()->detailsById( // the order id )
 ```
 
 ## Authors
