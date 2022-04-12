@@ -17,5 +17,4 @@ class WalletResource
     {
         return $this->shiprocket->get("https://apiv2.shiprocket.in/v1/external/account/details/wallet-balance");
     }
-
 }
