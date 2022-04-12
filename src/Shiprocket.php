@@ -2,13 +2,13 @@
 
 namespace AniketIN\Shiprocket;
 
-use Error;
-use Illuminate\Support\Facades\Http;
+use AniketIN\Shiprocket\Resources\CourierResource;
 use AniketIN\Shiprocket\Resources\OrderResource;
 use AniketIN\Shiprocket\Resources\ReturnResource;
-use AniketIN\Shiprocket\Resources\CourierResource;
 use AniketIN\Shiprocket\Resources\ShipmentResource;
 use AniketIN\Shiprocket\Resources\TrackingResource;
+use Error;
+use Illuminate\Support\Facades\Http;
 
 class Shiprocket
 {
@@ -57,8 +57,10 @@ class Shiprocket
     public function getToken(): string
     {
         $duration = config('shiprocket.token_cache') ? config('shiprocket.token_cache_duration') : 0;
-        
-        if (!$duration) return $this->login()->json()['token'];
+
+        if (! $duration) {
+            return $this->login()->json()['token'];
+        }
 
         return cache()->remember("shiprocket-token-{$this->credentials['email']}", $duration, function () {
             return $this->login()->json()['token'];

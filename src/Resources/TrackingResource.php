@@ -30,6 +30,6 @@ class TrackingResource
 
     public function order($order_id, $channel_id = null)
     {
-        return $this->shiprocket->get("https://apiv2.shiprocket.in/v1/external/courier/track" , ['order_id' => $order_id, 'channel_id' => $channel_id]);
+        return $this->shiprocket->get("https://apiv2.shiprocket.in/v1/external/courier/track", ['order_id' => $order_id, 'channel_id' => $channel_id]);
     }
 }
