@@ -16,7 +16,9 @@ Shiprocket API Wrapper for Laravel
     3. [Return Orders](https://github.com/Aniket-IN/laravel-shiprocket#return-orders)
     4. [Shipments](https://github.com/Aniket-IN/laravel-shiprocket#shipments)
     5. [Tracking](https://github.com/Aniket-IN/laravel-shiprocket#tracking)
-    5. [Pickup Addresses](https://github.com/Aniket-IN/laravel-shiprocket#pickup-addresses)
+    6. [Pickup Addresses](https://github.com/Aniket-IN/laravel-shiprocket#pickup-addresses)
+    7. [Wallet](https://github.com/Aniket-IN/laravel-shiprocket#wallet)
+    8. [Products](#products)
 
 
 
