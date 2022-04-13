@@ -369,6 +369,42 @@ Shiprocket::pickupAddress()->create([
 
 
 
+## Wallet
+
+#### Get Wallet Balance
+https://apidocs.shiprocket.in/#341bd458-5d80-4978-8e30-13651be2a652
+```php
+Shiprocket::wallet()->getBalance()
+```
+
+
+
+## Products
+
+#### Get All Products
+https://apidocs.shiprocket.in/#0b8d1f26-3abd-4f4e-9cd8-3928bcfcf30b
+```php
+Shiprocket::product()->all([
+    // refer above url for required parameters...
+])
+```
+
+#### Get Specific Product Details
+https://apidocs.shiprocket.in/#134f7710-660c-464f-b579-6da46ba9402f
+```php
+Shiprocket::product()->detailsById($product_id)
+```
+
+#### Add New Products
+https://apidocs.shiprocket.in/#344b789d-584e-486a-a7a9-0cf33ce52bf3
+```php
+Shiprocket::product()->create([
+    // refer above url for required parameters...
+])
+```
+
+
+
 
 
 ## Authors
