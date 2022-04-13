@@ -27,5 +27,4 @@ class ProductResource
     {
         return $this->shiprocket->post("https://apiv2.shiprocket.in/v1/external/products", $params);
     }
-
 }
