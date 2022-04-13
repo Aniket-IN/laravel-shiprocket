@@ -266,6 +266,28 @@ Shiprocket::courier()->requestShipmentPickup([
 
 
 
+## Return Orders
+
+#### Create a Return Order
+https://apidocs.shiprocket.in/#81b2135b-d43c-4002-8f7f-a670aa5210fa
+```php
+Shiprocket::return()->create([
+    // refer above url for required parameters...
+])
+```
+
+#### Get All Return Orders
+https://apidocs.shiprocket.in/#a98c37b1-47ac-40b4-b80f-051611fe350e
+```php
+Shiprocket::return()->all([
+    // refer above url for required parameters...
+])
+```
+
+
+
+
+
 
 
 
