@@ -16,6 +16,7 @@ Shiprocket API Wrapper for Laravel
     3. [Return Orders](https://github.com/Aniket-IN/laravel-shiprocket#return-orders)
     4. [Shipments](https://github.com/Aniket-IN/laravel-shiprocket#shipments)
     5. [Tracking](https://github.com/Aniket-IN/laravel-shiprocket#tracking)
+    5. [Pickup Addresses](https://github.com/Aniket-IN/laravel-shiprocket#pickup-addresses)
 
 
 
@@ -344,6 +345,26 @@ https://apidocs.shiprocket.in/#bfcf3357-4e39-4134-831a-1ff33f67205e
 Shiprocket::track()->order($order_id)
 ```
 
+
+
+
+
+
+## Pickup Addresses
+
+#### Get All Pickup Locations
+https://apidocs.shiprocket.in/#3bd67de6-8f00-435f-a708-c0c3ab252fee
+```php
+Shiprocket::pickupAddress()->all()
+```
+
+#### Add a New Pickup Location
+https://apidocs.shiprocket.in/#6fbe81f5-c3d5-462e-b18f-d6316dde7779
+```php
+Shiprocket::pickupAddress()->create([
+    // refer above url for required parameters...
+])
+```
 
 
 
