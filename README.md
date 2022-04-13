@@ -6,13 +6,16 @@ Shiprocket API Wrapper for Laravel
 
 ## Table of Contents
 1. [Features](https://github.com/Aniket-IN/laravel-shiprocket#features)
-1. [Installation](https://github.com/Aniket-IN/laravel-shiprocket#installation)
-1. [Import](https://github.com/Aniket-IN/laravel-shiprocket#installation)
-1. [Authenticationn](https://github.com/Aniket-IN/laravel-shiprocket#authenticationn)
-1. [Response](https://github.com/Aniket-IN/laravel-shiprocket#response)
-1. [Usage](https://github.com/Aniket-IN/laravel-shiprocket#response)
-    1. [Orders](https://github.com/seshac/laravel-shiprocket-api#orders)
-    1. [Couriers](https://github.com/seshac/laravel-shiprocket-api#couriers)
+2. [Installation](https://github.com/Aniket-IN/laravel-shiprocket#installation)
+3. [Import](https://github.com/Aniket-IN/laravel-shiprocket#installation)
+4. [Authenticationn](https://github.com/Aniket-IN/laravel-shiprocket#authenticationn)
+5. [Response](https://github.com/Aniket-IN/laravel-shiprocket#response)
+6. [Usage](https://github.com/Aniket-IN/laravel-shiprocket#response)
+    1. [Orders](https://github.com/Aniket-IN/laravel-shiprocket#orders)
+    2. [Couriers](https://github.com/Aniket-IN/laravel-shiprocket#couriers)
+    3. [Return Orders](https://github.com/Aniket-IN/laravel-shiprocket#return-orders)
+    4. [Shipments](https://github.com/Aniket-IN/laravel-shiprocket#shipments)
+    5. [Tracking](https://github.com/Aniket-IN/laravel-shiprocket#tracking)
 
 
 
@@ -284,6 +287,62 @@ Shiprocket::return()->all([
 ])
 ```
 
+
+
+
+
+
+## Shipments
+
+#### Get All Shipment Details
+https://apidocs.shiprocket.in/#a9913eaf-94ba-4012-a105-9687fddc7221
+```php
+Shiprocket::shipment()->all([
+    // refer above url for required parameters...
+])
+```
+
+#### Get Details of Specific Shipment
+https://apidocs.shiprocket.in/#5f9bced5-4f16-4868-be55-a8c0215d0711
+```php
+Shiprocket::shipment()->detailsById($shipment_id)
+```
+
+#### Cancel Shipments By AWBs
+https://apidocs.shiprocket.in/#659bb564-413a-4e4c-b866-ebe01d3f61dc
+```php
+Shiprocket::shipment()->cancelByAWBs([123456, 7890123])
+```
+
+
+
+
+
+## Tracking
+
+#### Get Tracking through AWB
+https://apidocs.shiprocket.in/#f2ac0962-4c34-4fe4-8266-50f8a1e8eab0
+```php
+Shiprocket::track()->awb($awb)
+```
+
+#### Get Tracking Data for Multiple AWBS
+https://apidocs.shiprocket.in/#cf273e6a-08d0-4624-bf7a-7510c28292e0
+```php
+Shiprocket::track()->multipleAwb($awb_array)
+```
+
+#### Get Tracking through Shipment ID
+https://apidocs.shiprocket.in/#89005f4f-2b2f-473d-95b0-f54665a16b42
+```php
+Shiprocket::track()->shipment($shipment_id)
+```
+
+#### Get Tracking Data through Order iD
+https://apidocs.shiprocket.in/#bfcf3357-4e39-4134-831a-1ff33f67205e
+```php
+Shiprocket::track()->order($order_id)
+```
 
 
 
