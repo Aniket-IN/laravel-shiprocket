@@ -5,19 +5,19 @@ Shiprocket API Wrapper for Laravel
 
 
 ## Table of Contents
-1. [Features](https://github.com/Aniket-IN/laravel-shiprocket#features)
-2. [Installation](https://github.com/Aniket-IN/laravel-shiprocket#installation)
-3. [Import](https://github.com/Aniket-IN/laravel-shiprocket#installation)
-4. [Authenticationn](https://github.com/Aniket-IN/laravel-shiprocket#authenticationn)
-5. [Response](https://github.com/Aniket-IN/laravel-shiprocket#response)
-6. [Usage](https://github.com/Aniket-IN/laravel-shiprocket#response)
-    1. [Orders](https://github.com/Aniket-IN/laravel-shiprocket#orders)
-    2. [Couriers](https://github.com/Aniket-IN/laravel-shiprocket#couriers)
-    3. [Return Orders](https://github.com/Aniket-IN/laravel-shiprocket#return-orders)
-    4. [Shipments](https://github.com/Aniket-IN/laravel-shiprocket#shipments)
-    5. [Tracking](https://github.com/Aniket-IN/laravel-shiprocket#tracking)
-    6. [Pickup Addresses](https://github.com/Aniket-IN/laravel-shiprocket#pickup-addresses)
-    7. [Wallet](https://github.com/Aniket-IN/laravel-shiprocket#wallet)
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Import](#installation)
+4. [Authenticationn](#authenticationn)
+5. [Response](#response)
+6. [Usage](#response)
+    1. [Orders](#orders)
+    2. [Couriers](#couriers)
+    3. [Return Orders](#return-orders)
+    4. [Shipments](#shipments)
+    5. [Tracking](#tracking)
+    6. [Pickup Addresses](#pickup-addresses)
+    7. [Wallet](#wallet)
     8. [Products](#products)
 
 
