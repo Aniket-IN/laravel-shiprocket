@@ -40,7 +40,7 @@ You can install the package via composer:
 
 You can publish config file with:
 ```bash
-  php artisan vendor:publish --provider="AniketIN\Shiprocket\ShiprocketServiceProvider" --tag="config"
+  php artisan vendor:publish --provider="AniketIN\Shiprocket\ShiprocketServiceProvider" --tag="shiprocket-config"
 ```
 
 This is the contents of the published config file:
