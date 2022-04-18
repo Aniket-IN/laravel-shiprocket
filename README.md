@@ -221,9 +221,7 @@ Shiprocket::order()->all([
 #### Get Specific Order Details
 https://apidocs.shiprocket.in/#aa23cc40-6ee8-4ce0-b0ab-1a7291514299
 ```php
-Shiprocket::order()->detailsById( 
-    // the order id 
-)
+Shiprocket::order()->detailsById($orderId)
 ```
 
 
