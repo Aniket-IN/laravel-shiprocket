@@ -8,7 +8,7 @@ Shiprocket API Wrapper for Laravel
 1. [Features](#features)
 2. [Installation](#installation)
 3. [Import](#installation)
-4. [Authenticationn](#authenticationn)
+4. [Authentication](#authentication)
 5. [Response](#response)
 6. [Usage](#response)
     1. [Orders](#orders)
@@ -205,7 +205,9 @@ Shiprocket::order()->update([
 #### Cancel an Order
 https://apidocs.shiprocket.in/#5c0e41ca-d868-44c4-8ddb-73a8de239401
 ```php
-Shiprocket::order()->cancelByIds([ // order ids... ])
+Shiprocket::order()->cancelByIds([ 
+    // order ids... 
+])
 ```
 
 #### Get all Orders
@@ -219,7 +221,9 @@ Shiprocket::order()->all([
 #### Get Specific Order Details
 https://apidocs.shiprocket.in/#aa23cc40-6ee8-4ce0-b0ab-1a7291514299
 ```php
-Shiprocket::order()->detailsById( // the order id )
+Shiprocket::order()->detailsById( 
+    // the order id 
+)
 ```
 
 
