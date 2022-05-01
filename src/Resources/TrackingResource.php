@@ -10,7 +10,7 @@ class TrackingResource
 
     public function __construct(Shiprocket $shiprocket)
     {
-        return $this->shiprocket = $shiprocket;
+        $this->shiprocket = $shiprocket;
     }
 
     public function awb($awb)
