@@ -10,6 +10,7 @@ use AniketIN\Shiprocket\Resources\ReturnResource;
 use AniketIN\Shiprocket\Resources\ShipmentResource;
 use AniketIN\Shiprocket\Resources\TrackingResource;
 use AniketIN\Shiprocket\Resources\WalletResource;
+use AniketIN\Shiprocket\Resources\CountryResource;
 use Error;
 use Illuminate\Support\Facades\Http;
 
@@ -70,6 +71,11 @@ class Shiprocket
     public function product()
     {
         return new ProductResource($this);
+    }
+
+    public function country()
+    {
+        return new CountryResource($this);
     }
 
     public function getToken(): string
